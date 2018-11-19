@@ -1,0 +1,33 @@
+body{
+	background-color: #eee !important;	
+}
+
+#resultados{
+		background-color: #d3d3d3;
+		border-radius: 5px;
+		min-height: 600px;
+	}
+
+@media screen and (min-width: 768px){
+		.jumbotron {
+			padding-top: 1px !important;
+			padding-bottom: 0px !important;
+		}
+	}
+
+#nome_destino{
+	width: 80% !important;
+	display: inline-block !important;
+}
+
+#pesquisar_destino span.input-group-btn{
+	display: inline-block !important;
+	position: relative;
+    height: 34px;
+    left: -5px;
+    top: -1px;
+}
+
+	
+
+	
