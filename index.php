@@ -187,7 +187,7 @@ $(document).ready(function(){
 		</div>
 </header> 
 
-<!--AREA RESPONSTAVEL PELA ROW (LOGO, SEARCH, LOGIN, SIGN-->>
+<!--AREA RESPONSTAVEL PELA ROW (LOGO, SEARCH, LOGIN, SIGN-->
 <div id="area1" class="col-md-12">
 
 	<div id="logo" class="col-md-2">
@@ -205,12 +205,12 @@ $(document).ready(function(){
 
 	<div id="usuario" class="col-md-2" >
 		<span style="display: inline-block;">Usuário:</span>
-		<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Digite seu usuário...">
+		<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Digite seu usuário..." required="true">
 	</div>
 
 	<div id="senha" class="col-md-2">
 		<span style="display: inline-block;">Senha:</span>
-		<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha...">
+		<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha..." required="true">
 	</div>
 
 	<div id="botao_cadastrar" class="col-md-1">
@@ -222,12 +222,7 @@ $(document).ready(function(){
 </div>
 
 
-
-
-
-
-
-<div class="container col-md-7">
+<div class="container col-md-7" style="display: none;">
 	<div>
 		<h2 class="text-center"><b>Pesquisas</b></h2>
 		<!--Criação das tabs-->
@@ -397,18 +392,31 @@ $(document).ready(function(){
 
 </div> <!--FECHA O CONTAINER DA AREA DAS PESQUISAS-->
 
-
-
-
-
-
-
-<div id="resultados" class="container col-md-5 text-center" style="position: relative;">
+<div id="resultados" class="container col-md-5 text-center" style="position: relative;display: none;">
    <h1><strong>Resultados:</strong></h1>
    <div id="teste" class="list-group"><img src="loader.gif" style="display: none; margin-left: auto;margin-right: auto;height: 200px;" id="loader"></div>
 </div>
 
+<!--***************************************************************************************************************************-->
 
+
+<div id="ofertas_pag_ini" class="row">
+
+	<span class="col-md-12">Ofertas de Viagens</span>
+
+	<div class="col-md-4">
+		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+	</div>
+	
+	<div class="col-md-4">
+		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+	</div>
+	
+	<div class="col-md-4">
+		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+	</div>
+
+</div>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	

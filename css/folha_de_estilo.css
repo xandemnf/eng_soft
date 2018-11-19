@@ -47,3 +47,26 @@ body{
 #usuario input, #senha input{
    width: 72%;
  }
+
+ #ofertas_pag_ini div{
+ 	height: 700px;
+ 	background-color: #cdc;
+ 	text-align: center;
+ 	margin-top: 20px;
+ }
+
+ #ofertas_pag_ini span{
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+ }
+
+ #ofertas_pag_ini div{
+    max-height: 500px;
+    max-width: 33%;
+    height: 500px;
+    width: 32%;
+    background-color: #ccc;
+    margin: 20 5px;
+
+ }
