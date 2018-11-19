@@ -16,7 +16,7 @@ body{
 	}
 
 #nome_destino{
-	width: 80% !important;
+	width: 90% !important;
 	display: inline-block !important;
 }
 
@@ -28,6 +28,22 @@ body{
     top: -1px;
 }
 
+#pesquisar_destino{
+	margin: 22px 0px 0px 0px;
+}
 	
+#botao_cadastrar{
+	margin: 22px 0px 0px 0px;
+}
 
-	
+#usuario, #senha{
+	margin: 22px 0px 0px 0px;
+}
+
+#user_name, #password{
+	display: inline-block !important; 
+}
+
+#usuario input, #senha input{
+   width: 72%;
+ }

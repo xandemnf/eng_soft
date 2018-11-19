@@ -10,6 +10,9 @@
 
 <link rel="icon" href="img/images.png">
 
+<script type="text/javascript" src="js/javascript.js"></script>
+
+
 <!-- jquery - link cdn -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -184,13 +187,14 @@ $(document).ready(function(){
 		</div>
 </header> 
 
+<!--AREA RESPONSTAVEL PELA ROW (LOGO, SEARCH, LOGIN, SIGN-->>
 <div id="area1" class="col-md-12">
 
 	<div id="logo" class="col-md-2">
 		<img src="img/eagle-logo.png" class="img-responsive">
 	</div>
 
-	<div id="pesquisar_destino" class="col-md-6">
+	<div id="pesquisar_destino" class="col-md-5">
 		<input id="nome_destino" type="text" class="form-control" placeholder="Digite o seu destino..." autocomplete="on">
 			<span class="input-group-btn">
 				<button id="btn_escola_nome" type="submit" class="btn btn-default btnSearch btn_carrega_conteudo">
@@ -198,6 +202,21 @@ $(document).ready(function(){
 				</button>
 			</span>
 	</div>
+
+	<div id="usuario" class="col-md-2" >
+		<span style="display: inline-block;">Usuário:</span>
+		<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Digite seu usuário...">
+	</div>
+
+	<div id="senha" class="col-md-2">
+		<span style="display: inline-block;">Senha:</span>
+		<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha...">
+	</div>
+
+	<div id="botao_cadastrar" class="col-md-1">
+		<button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar" >Cadastrar</button>
+	</div>
+
 
 
 </div>
