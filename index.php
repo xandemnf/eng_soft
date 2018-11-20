@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/folha_de_estilo.css">
 
 
-<link rel="icon" href="img/images.png">
+<link rel="icon" href="img/eagle/images.png">
 
 <script type="text/javascript" src="js/javascript.js"></script>
 
@@ -187,11 +187,11 @@ $(document).ready(function(){
 		</div>
 </header> 
 
-<!--AREA RESPONSTAVEL PELA ROW (LOGO, SEARCH, LOGIN, SIGN-->
+<!--AREA RESPONSTAVEL PELA ROW (LOGO, SEARCH, LOGIN, SIGN -->
 <div id="area1" class="col-md-12">
 
 	<div id="logo" class="col-md-2">
-		<img src="img/eagle-logo.png" class="img-responsive">
+		<img src="img/eagle/eagle-logo.png" class="img-responsive">
 	</div>
 
 	<div id="pesquisar_destino" class="col-md-5">
@@ -214,206 +214,41 @@ $(document).ready(function(){
 	</div>
 
 	<div id="botao_cadastrar" class="col-md-1">
-		<button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar" >Cadastrar</button>
+		<button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar">Cadastrar</button>
 	</div>
 
-
-
 </div>
 
-
-<div class="container col-md-7" style="display: none;">
-	<div>
-		<h2 class="text-center"><b>Pesquisas</b></h2>
-		<!--Criação das tabs-->
-		<ul class="nav nav-tabs" role="tablist">
-			<li class="active"><a href="#escola" data-toggle="tab">Escola</a></li>
-			<li><a href="#aluno" data-toggle="tab" role="tab">Aluno</a></li>
-			<li><a href="#docente" data-toggle="tab" role="tab">Docente</a></li>
-			<li><a href="#turma" data-toggle="tab" role="tab">Turma</a></li>
-			<li><a href="#view" data-toggle="tab" role="tab">Mais Velho</a></li>
-			<li><a href="#trigger" data-toggle="tab" role="tab">Update N.Escola</a></li>
-			<li><a href="#procedure" data-toggle="tab" role="tab">Escolas Urb/Rur.</a></li>
-		</ul>
-
-		<!--Criação das tabs (container de conteúdos)-->
-		<div class="tab-content">
-					
-			<!--Escola-->
-			<div class="tab-pane active" role="tabpanel" id="escola">
-				<div id="pesquisa_escola" class="row">
-					<!--<form method="post" action="consulta_sql.php">-->
-						<div class="container col-md-6">
-							<h4>Pesquisar por nome da Escola:</h4>
-							<div class="input-group">
-								<input id="nome_escola" type="text" class="form-control" placeholder="Procurar por nome..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_escola_nome" type="submit" class="btn btn-default btnSearch btn_carrega_conteudo">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="container col-md-5">
-							<h4>Pesquisar por Código da Escola:</h4>
-							<div class="input-group ">
-								<input id="codigo_escola" name="codigo_escola" type="text" class="form-control" placeholder="Procurar por escola..." autocomplete="off">
-									<span class="input-group-btn">
-										<button id="btn_escola_codigo" type="button" class="btn btn-default btnSearch btn_carrega_conteudo">
-											<span class="glyphicon glyphicon-search"> </span>
-										</button>
-						 			</span>
-							</div>
-						</div>
-					<!--</form>-->
-				</div> <!--FECHA A ROW ESCOLA-->
-			</div><!--FECHA A TAB ESCOLA-->
-
-			<!--Aluno-->
-			<div class="tab-pane" role="tabpanel" id="aluno">
-				<div id="pesquisa_aluno" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Pesquisar por Matrícula do Aluno:</h4>
-							<div class="input-group">
-								<input id="codigo_matricula" name="codigo_matricula" type="text" class="form-control" placeholder="Procurar por matrícula..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_aluno_codigo" type="button" class="btn btn-default btnSearch btn_carrega_conteudo">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-				 				</span>
-							</div>
-						</div>
-					</form>
-				</div> <!--FECHA A ROW ALUNO-->
-			</div> <!--FECHA A TAB ALUNO-->
-
-			<!--Docente-->
-			<div class="tab-pane" role="tabpanel" id="docente">
-				<div id="pesquisa_docente" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Pesquisar por código do Docente:</h4>
-							<div class="input-group">
-								<input id="codigo_docente" name="codigo_docente" type="text" class="form-control" placeholder="Procurar por docente..." autocomplete="off">
-									<span class="input-group-btn">
-										<button id="btn_docente_codigo" type="button" class="btn btn-default btnSearch btn_carrega_conteudo">
-											<span class="glyphicon glyphicon-search"> </span>
-										</button>
-						 			</span>
-							</div>
-						</div>
-					</form>	
-				</div><!--FECHA A ROW DOCENTE-->
-			</div>	<!--FECHA A TAB DOCENTE-->
-
-			<!--Turma-->
-			<div class="tab-pane" role="tabpanel" id="turma">
-				<div id="pesquisa_turma" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Pesquisar por código da Turma:</h4>
-							<div class="input-group">
-								<input id="codigo_turma" name="codigo_turma" type="text" class="form-control" placeholder="Procurar por turma..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_turma_codigo" type="button" class="btn btn-default btnSearch btn_carrega_conteudo">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-				 				</span>
-							</div>
-						</div>
-					</form>
-				</div><!--FECHA A ROW TURMA-->
-			</div><!--FECHA A TAB TURMA-->
-			
-			<!--View-->
-			<div class="tab-pane" role="tabpanel" id="view">
-				<div id="pesquisa_view" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Pesquisar por Docentes mais velhos:</h4>
-							<div class="input-group">
-								<input id="qtd_res" name="qtd_res" type="text" class="form-control" placeholder="nro de Doc's a procurar..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_docente_velho" type="button" class="btn btn-default btnSearch btn_carrega_conteudo">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-				 				</span>
-							</div>
-						</div>
-					</form>
-				</div> <!--FECHA A ROW View-->
-			</div> <!--FECHA A TAB View-->
-		
-		
-			<!--Trigger-->
-			<div class="tab-pane" role="tabpanel" id="trigger">
-				<div id="pesquisa_trigger" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Update no nome de uma escola:</h4>
-							<div class="input-group">
-								<input id="cod_esc" name="cod_esc" type="text" class="form-control" placeholder="codigo da escola..." autocomplete="off">
-								<input id="novo_noesc" name="novo_noesc" type="text" class="form-control" placeholder="novo nome da escola..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_trigger" type="button" class="btn btn-danger btn_carrega_conteudo">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-				 				</span>
-							</div>
-						</div>
-					</form>
-				</div> <!--FECHA A ROW Trigger-->
-			</div> <!--FECHA A TAB Trigger-->
-			
-			<!--Procedure-->
-			<div class="tab-pane" role="tabpanel" id="procedure">
-				<div id="pesquisa_procedure" class="row">
-					<form method="post" action="consulta_sql.php">
-						<div class="container col-md-5">
-							<h4>Pesquisar escolas Urbanas ou Rurais:</h4>
-							<div class="input-group">
-								<input id="loc" name="loc" type="text" class="form-control" placeholder="1- Urbanas, 2- Rurais..." autocomplete="off">
-								<span class="input-group-btn">
-									<button id="btn_procedure" type="button" class="btn btn-default btnSearch">
-										<span class="glyphicon glyphicon-search"> </span>
-									</button>
-				 				</span>
-							</div>
-						</div>
-					</form>
-				</div> <!--FECHA A ROW Procedure-->
-			</div> <!--FECHA A TAB Procedure-->
-			
-		</div>	<!--FECHA O CONTAINER DE CONTEUDO DAS TABS-->
-
-	</div> <!--Tab-content-->
-
-</div> <!--FECHA O CONTAINER DA AREA DAS PESQUISAS-->
-
-<div id="resultados" class="container col-md-5 text-center" style="position: relative;display: none;">
-   <h1><strong>Resultados:</strong></h1>
-   <div id="teste" class="list-group"><img src="loader.gif" style="display: none; margin-left: auto;margin-right: auto;height: 200px;" id="loader"></div>
-</div>
-
-<!--***************************************************************************************************************************-->
+<!--BLOCKOUT-->
 
 
-<div id="ofertas_pag_ini" class="row">
+	
+<div id="ofertas_pag_ini" class="col-md-12"> 
 
 	<span class="col-md-12">Ofertas de Viagens</span>
 
 	<div class="col-md-4">
-		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+		<div class="cont_img">
+			<img src="img/rj/rio_de_janeiro/rio.jpg" class="thumbnail" alt="Cinque Terre">
+		</div>
+		<h3>Rio de Janeiro - RJ</h3>
+		<p>Venha conhecer o melhor do Rio de Janeiro com os melhores preços que cabem no seu bolso</p>	
 	</div>
 	
 	<div class="col-md-4">
-		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+		<div class="cont_img">
+			<img src="img/rj/arraial_do_cabo/arraial.jpg" class="thumbnail" alt="Cinque Terre">
+		</div>
+		<h3>Arraial do Cabo - RJ</h3>
+		<p>Venha conhecer o melhor de Arraial com os melhores preços que cabem no seu bolso</p>	
 	</div>
 	
 	<div class="col-md-4">
-		<img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+		<div class="cont_img">
+			<img src="img/rs/gramado/gramado-festuris-2016.jpg" class="thumbnail" alt="Cinque Terre">
+		</div>
+		<h3>Gramado - RS</h3>
+		<p>Venha conhecer o melhor de Gramado com os melhores preços que cabem no seu bolso</p>	
 	</div>
 
 </div>

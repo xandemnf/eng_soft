@@ -6,10 +6,10 @@ class bd{
 	private $host = 'localhost'; 
 
 	//usuario
-	private $usuario = 'root';
+	private $usuario = 'admin';
 
 	//senha
-	private $senha = 'xbox0209'; //ADICIONE A SUA SENHA DO SEU BANCO DE DADOS AQUI
+	private $senha = 'admin'; //ADICIONE A SUA SENHA DO SEU BANCO DE DADOS AQUI
 
 	//banco_de_dados
 	private $database = 'ce2016co';
