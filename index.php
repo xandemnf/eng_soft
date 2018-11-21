@@ -197,7 +197,7 @@ $(document).ready(function(){
 	<div id="pesquisar_destino" class="col-md-4">
 		<input id="nome_destino" type="text" class="form-control" placeholder="Digite o seu destino..." autocomplete="on">
 			<span class="input-group-btn">
-				<button id="btn_escola_nome" type="submit" class="btn btn-default btnSearch btn_carrega_conteudo">
+				<button id="btn_destino" type="submit" class="btn btn-default btnSearch btn_carrega_conteudo">
 					<span class="glyphicon glyphicon-search"> </span>
 				</button>
 			</span>
@@ -258,8 +258,7 @@ $(document).ready(function(){
 
 </div>
 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

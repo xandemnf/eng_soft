@@ -105,3 +105,16 @@ div#usuario.col-md-2 span, div#senha.col-md-2 span{
  	overflow: hidden;
  	margin-top: 0px !important;
  }
+
+ #tipo_usuario input{
+ 	width:49% !important;
+ 	display: inline-block;
+ 	height: 20px;
+ }
+
+  #tipo_usuario span{
+ 	width:49% !important;
+ 	display: block;
+ 	float: left;
+ 	text-align: center;
+ }
