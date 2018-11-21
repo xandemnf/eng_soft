@@ -1,5 +1,26 @@
 <?php 
 
+require_once('conecta_db.php');
+
+$reserva = $_SESSION['reserva']
+
+$objDb = new db();
+$link = $objDb->conecta_mysql();
+
+$sql = "insert into usuarios(reserva) values('$reserva')";
+
+if(mysqli_query($link, $sql) ){
+	echo 'Reserva registrada com sucesso!';
+} else{
+	echo 'Erro ao registrar a reserva!';
+}
+
+
+?>
+
+
+<?php 
+
 session_start();
 
 require_once('conecta_db.php');
@@ -12,7 +33,7 @@ $tipo = $_SESSION['tipo'];
 //echo '<br>';
 //echo $senha;
 
-$sql = "select usuario, email, tipo from usuarios where usuario = '$usuario' and senha = '$senha'";
+
 
 //echo $sql;
 $objDb = new db;

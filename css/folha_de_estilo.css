@@ -65,11 +65,9 @@ body{
 	display: inline-block !important; 
 }
 
-
-
 #ofertas_pag_ini{
  	border-radius: 12px; 
- 	background-color: #cdc;
+ 	background-color: #eee;
  	margin-top: 20px;	
  }
 
@@ -122,4 +120,17 @@ div#usuario.col-md-2 span, div#senha.col-md-2 span{
  	display: block;
  	float: left;
  	text-align: center;
+ }
+
+ #carrinho span{
+ 	font-weight: 800;
+ 	display: block;
+ 	text-align: center;
+ 	font-size: 18px;
+ 	padding-top: 40px;
+ }
+
+ #carrinho_compras{
+ 	height: 300px;
+ 	background-color: #ccc;
  }
