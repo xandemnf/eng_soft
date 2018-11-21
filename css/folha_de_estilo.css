@@ -31,9 +31,25 @@ body{
 #pesquisar_destino{
 	margin: 22px 0px 0px 0px;
 }
-	
+
+#botao_login button{
+	width: 185%;
+}
+
 #botao_cadastrar{
-	margin: 22px 0px 0px 0px;
+	width: 70% !important;
+}
+	
+#botao_login, 	#botao_cadastrar{
+	margin: 22px 0px 0px 0px !important;
+}
+
+#botao_cadastrar p{
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 20px;
+   font-family: cursive;
+   transform: translateY(3px);
 }
 
 #usuario, #senha{

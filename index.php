@@ -191,10 +191,10 @@ $(document).ready(function(){
 <div id="area1" class="col-md-12">
 
 	<div id="logo" class="col-md-2">
-		<img src="img/eagle/eagle-logo.png" class="img-responsive">
+		<img src="img/eagle/eagle-logo.png" class="img-responsive" alt="Imagem não encontrada!">
 	</div>
 
-	<div id="pesquisar_destino" class="col-md-5">
+	<div id="pesquisar_destino" class="col-md-4">
 		<input id="nome_destino" type="text" class="form-control" placeholder="Digite o seu destino..." autocomplete="on">
 			<span class="input-group-btn">
 				<button id="btn_escola_nome" type="submit" class="btn btn-default btnSearch btn_carrega_conteudo">
@@ -213,7 +213,12 @@ $(document).ready(function(){
 		<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha..." required="true">
 	</div>
 
+	<div id="botao_login" class="col-md-1">
+		<button class="btn btn-default" value="botao_login" nome="botao_login">Login</button>
+	</div>
+
 	<div id="botao_cadastrar" class="col-md-1">
+		<p>Ainda não é cadastrado? Cadastre-se agora!</p>
 		<button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar">Cadastrar</button>
 	</div>
 
