@@ -1,3 +1,8 @@
+<?php 
+$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -8,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/folha_de_estilo.css">
 
 
-<link rel="icon" href="img/eagle/images.png">
+<link rel="icon" href="img/logo/logo.png">
 
 <script type="text/javascript" src="js/javascript.js"></script>
 
@@ -27,151 +32,32 @@
 
 <script type="text/javascript">
 
-$(document).ready(function() {
-    $("form").keypress(function(e) {
-        if (e.which == 13) {
-            return false;
-        }
-    });
-});
-
 $(document).ready(function(){
-	$('.btn_carrega_conteudo').click(function(){
+	$('#btn_login').click(function(){
+		//alert("O Botão entrar foi clicado");
+
+		var campo_vazio = false;
+
+		if($('#user_name').val() == ''){
+			//alert("O campo Usuário está vazio!");
+			$('#user_name').css({'border': '2px solid red'});
+			//$('#user_name').css({'border-color': '#A94442'});
+			campo_vazio = true;
+		}else{
+			$('#user_name').css({'border': '1px solid #ccc'});
+		}
+		if($('#password').val() == ''){
+			//alert("O campo Senha está vazio!");
+			$('#password').css({'border': '2px solid red'});
+			campo_vazio = true;
+		} else{
+			$('#password').css({'border': '1px solid #ccc'});
+		}
 		
-		var carrega_url = 'http://localhost/trab/';
-		$('#loader').css({display:"block"});
-		$.ajax({
-			url: carrega_url,
-			success: function(){
-				$('#loader').css({display:"block"});
-			}
+		if(campo_vazio) 
+			return false;
+
 		});
-	});
-});	
-
-$(document).ready(function(){
-
-	$('#btn_escola_nome').click(function(){
-		if($('#nome_escola').val().length > 0){
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { nome_escola: $('#nome_escola').val(), loc: '', novo_noesc: '', cod_esc: '', qtd_res: '',codigo_escola: '', codigo_matricula: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});
-	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}
-	});	
-
-	$('#btn_escola_codigo').click(function(){
-		if($('#codigo_escola').val().length > 0){
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { codigo_escola: $('#codigo_escola').val(), loc: '', novo_noesc: '', cod_esc: '', qtd_res: '',nome_escola: '', codigo_matricula: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});
-		
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}
-	});
-
-	$('#btn_aluno_codigo').click(function(){
-		if($('#codigo_matricula').val().length > 0){
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { codigo_matricula: $('#codigo_matricula').val(), loc: '', novo_noesc: '', cod_esc: '', qtd_res: '',nome_escola: '', codigo_escola: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});
-		
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}
-	});
-
-	$('#btn_docente_codigo').click(function(){
-		if($('#codigo_docente').val().length > 0){
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { codigo_docente: $('#codigo_docente').val(), novo_noesc: '', loc: '', cod_esc: '', qtd_res: '',codigo_escola: '', nome_escola: '', codigo_matricula: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});
-	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}
-	});
-
-	$('#btn_turma_codigo').click(function(){
-		if($('#codigo_turma').val().length > 0){
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { codigo_turma: $('#codigo_turma').val(), novo_noesc: '', cod_esc: '', loc: '', qtd_res: '',codigo_escola: '', nome_escola: '', codigo_matricula: '', codigo_docente: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});
-	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}
-	});
-	$('#btn_docente_velho').click(function(){
-		if($('#qtd_res').val().length > 0){	
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { qtd_res: $('#qtd_res').val(), novo_noesc: '', cod_esc: '', codigo_escola: '', loc: '', nome_escola: '', codigo_matricula: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}		
-	});
-	$('#btn_trigger').click(function(){
-		if($('#cod_esc').val().length > 0){	
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { cod_esc: $('#cod_esc').val(), novo_noesc: $('#novo_noesc').val(), qtd_res: '', loc: '', codigo_escola: '', nome_escola: '', codigo_matricula: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}		
-	});
-	$('#btn_procedure').click(function(){
-		if($('#loc').val().length > 0){	
-			$.ajax({
-				url: 'consulta_sql.php',
-				method: 'post',
-				data: { loc: $('#loc').val(), cod_esc: '', novo_noesc: '', qtd_res: '', codigo_escola: '', nome_escola: '', codigo_matricula: '', codigo_docente: '', codigo_turma: '' },
-				success: function(data){
-					$('#teste').html(data);
-				}
-			});	
-		}else{
-			alert("<h2><b>Por Favor preencha os dados nos campos de pesquisa</b></h2>");
-		}		
-	});
 });
 
 </script>
@@ -191,7 +77,7 @@ $(document).ready(function(){
 <div id="area1" class="col-md-12">
 
 	<div id="logo" class="col-md-2">
-		<img src="img/eagle/eagle-logo.png" class="img-responsive" alt="Imagem não encontrada!">
+		<img src="img/logo/logo.png" class="img-responsive" alt="Imagem não encontrada!" >
 	</div>
 
 	<div id="pesquisar_destino" class="col-md-4">
@@ -203,24 +89,33 @@ $(document).ready(function(){
 			</span>
 	</div>
 
-	<div id="usuario" class="col-md-2" >
-		<span style="display: inline-block;">Usuário:</span>
-		<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Digite seu usuário..." required="true">
-	</div>
+	<form method="post" action="validar_acesso.php">
+		<div id="usuario" class="col-md-2" >
+			<span style="display: inline-block;">Usuário:</span>
+			<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Digite seu usuário..." required="true">
+		</div>
 
-	<div id="senha" class="col-md-2">
-		<span style="display: inline-block;">Senha:</span>
-		<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha..." required="true">
-	</div>
+		<div id="senha" class="col-md-2">
+			<span style="display: inline-block;">Senha:</span>
+			<input id="password" class="form-control" type="password" name="password" placeholder="Digite sua senha..." required="true">
+		</div>
 
-	<div id="botao_login" class="col-md-1">
-		<button class="btn btn-default" value="botao_login" nome="botao_login">Login</button>
-	</div>
+		<div id="botao_login" class="col-md-1">
+			<button id="btn_login" type="submit" class="btn btn-default" value="botao_login" nome="botao_login">Login</button>
+		</div>	
+	</form>
 
 	<div id="botao_cadastrar" class="col-md-1">
 		<p>Ainda não é cadastrado? Cadastre-se agora!</p>
-		<button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar">Cadastrar</button>
+		<a href="cadastro_novo_usuario.php"><button class="btn btn-default" value="botao_cadastrar" nome="botao_cadastrar">Cadastrar</button></a>
 	</div>
+
+	<?php 
+		if($erro == 1){
+			echo "<span style='float: left;display: inline-block;color: red;font-size: 27px;padding-top: 25px;transform: translateX(-48px);'>Usuário ou senha <b>inválidos</b></span>";
+		}
+
+	?>
 
 </div>
 

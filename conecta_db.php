@@ -1,18 +1,18 @@
 <?php
 
-class bd{
+class db{
 
 	//host
 	private $host = 'localhost'; 
 
 	//usuario
-	private $usuario = 'admin';
+	private $usuario = 'root';
 
 	//senha
-	private $senha = 'admin'; //ADICIONE A SUA SENHA DO SEU BANCO DE DADOS AQUI
+	private $senha = ''; //ADICIONE A SUA SENHA DO SEU BANCO DE DADOS AQUI
 
 	//banco_de_dados
-	private $database = 'ce2016co';
+	private $database = 'eng_soft';
 
 	public function conecta_mysql(){
 		//criar conecxao

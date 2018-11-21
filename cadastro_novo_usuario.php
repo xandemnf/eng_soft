@@ -45,7 +45,7 @@
 	    	<div class="col-md-4">
 	    		<h3 style="text-align: center">Inscreva-se já.</h3>
 	    		<br />
-				<form method="post" action="" id="formCadastrarse">
+				<form method="post" action="registra_usuario.php" id="formCadastrarse">
 					<div class="form-group">
 						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
 					</div>
@@ -61,11 +61,11 @@
 					<div id="tipo_usuario" class="form-group">
 						<span style="width: 100% !important;display: block;font-size: 20px;font-weight: bold;font-size: 20px;margin-bottom: 15px;">Tipo de Usuário:</span>
 						<span>Administrador:</span>
-							<input type="radio" class="form-control" id="user_adm" name="tipo_usuario" required="requiored"><br>
+							<input type="radio" class="form-control" id="user_adm" name="tipo_usuario" value="adm" required="requiored"><br>
 						<span>Hóspede:</span>
-							<input type="radio" class="form-control" id="user_hosp" name="tipo_usuario" required="requiored"><br>
+							<input type="radio" class="form-control" id="user_hosp" name="tipo_usuario" value="hosp" required="requiored"><br>
 						<span>Proprietário:</span>
-							<input type="radio" class="form-control" id="user_prop" name="tipo_usuario" required="requiored">
+							<input type="radio" class="form-control" id="user_prop" name="tipo_usuario" value="prop" required="requiored">
 					</div>
 					
 					<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>

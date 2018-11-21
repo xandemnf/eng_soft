@@ -16,7 +16,7 @@
 		</script>
 	</head>
 
-	<body>
+	<body> 
 
 		<!-- Static navbar -->
 	    <nav class="navbar navbar-default navbar-static-top">
