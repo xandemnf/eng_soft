@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Requisição Assíncrona JQuery</title>
+	
+	<!-- bootstrap - link cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
+<!-- jquery - link cdn -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+		$('.btn_carrega_conteudo').click(function(){
+			
+			var carrega_url = this.id;
+			//alert(carrega_url);
+			carrega_url = carrega_url + "_conteudo.html";
+			//alert(carrega_url);
+		
+			$.ajax({
+				
+				url: carrega_url,
+				
+				success: function(data){
+					//alert("Requisição foi completada com sucesso");
+					$("#div_conteudo").html(data);
+				}, 
+
+				beforeSend: function(){
+					$("#loader_gif").css({display:"block"});
+				},
+
+				complete: function(){
+					$("#loader_gif").css({display:"none"});
+				}
+
+
+				
+			});
+
+		});
+	});
+	
+</script>
+
+
+</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-default navbar-static-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+	    			<a href="#" id="pagina_1" class="btn btn-primary btn_carrega_conteudo">Página 1</a>
+	    			<a href="#" id="pagina_2" class="btn btn-primary btn_carrega_conteudo">Página 2</a>
+	    			<a href="#" id="pagina_3" class="btn btn-primary btn_carrega_conteudo">Página 3</a>
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<br />
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div id="div_conteudo" class="col-md-10" >
+		    		<center><img id="loader_gif" src='../img/loader.gif' alt='Imagem não encontrada' style="display:none"></center>
+		    	</div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>
